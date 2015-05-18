@@ -1,4 +1,5 @@
-// http://composition.al/blog/2013/03/02/fizzbuzz-revisited
+// based on http://composition.al/blog/2013/03/02/fizzbuzz-revisited
+// all the way down the rabbit hole: http://chrismorgan.info/blog/rust-fizzbuzz.html
 
 enum Rem {
     Zero,
