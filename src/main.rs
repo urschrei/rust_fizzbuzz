@@ -1,16 +1,23 @@
 // based on http://composition.al/blog/2013/03/02/fizzbuzz-revisited
 // all the way down the rabbit hole: http://chrismorgan.info/blog/rust-fizzbuzz.html
 
+/// Used to match against a zero or non-zero remainder
 enum Rem {
+    /// No remainder
     Zero,
+    /// A remainder between 1 and 4
     Other(NonZeroRem)
 }
 
+/// Used to match a non-zero remainder
 enum NonZeroRem {
+    // we aren't doing anything with these values, but we could
     One, Two, Three, Four
 }
 
 fn int_to_rem(num: i32) -> Rem {
+    // Easily allows us to exhaustively decide the return value
+    // Input is the remainder of a modulo operation from a match expression
     match num {
         0 => Rem::Zero,
         1 => Rem::Other(NonZeroRem::One),
