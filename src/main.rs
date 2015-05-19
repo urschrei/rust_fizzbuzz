@@ -15,7 +15,7 @@ enum NonZeroRem {
     One, Two, Three, Four
 }
 
-fn int_to_rem(num: i32) -> Rem {
+fn int_to_rem(num: u8) -> Rem {
     // Easily allows us to exhaustively decide the return value
     // Input is the remainder of a modulo operation from a match expression
     match num {
@@ -29,7 +29,7 @@ fn int_to_rem(num: i32) -> Rem {
 }
 
 fn main() {
-    let nums = (1..101).collect::<Vec<i32>>();
+    let nums = (1..101).collect::<Vec<u8>>();
     for num in nums.iter() {
         let m = match (int_to_rem(num % 3), int_to_rem(num % 5)) {
             (Rem::Zero, Rem::Zero) => "FizzBuzz".to_string(),
