@@ -29,8 +29,7 @@ fn int_to_rem(num: u8) -> Rem {
 }
 
 fn main() {
-    let nums = (1..101).collect::<Vec<u8>>();
-    for num in nums.iter() {
+    for num in (1..101).collect::<Vec<u8>>() {
         println!("{}",
             match (int_to_rem(num % 3), int_to_rem(num % 5)) {
                 (Rem::Zero, Rem::Zero) => "FizzBuzz".to_string(),
