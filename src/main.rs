@@ -15,10 +15,10 @@ enum NonZeroRem {
     One, Two, Three, Four
 }
 
-fn int_to_rem(num: u8) -> Rem {
+fn int_to_rem(num: &u8) -> Rem {
     // Easily allows us to exhaustively decide the return value
     // Input is the remainder of a modulo operation from a match expression
-    match num {
+    match *num {
         0 => Rem::Zero,
         1 => Rem::Other(NonZeroRem::One),
         2 => Rem::Other(NonZeroRem::Two),
@@ -31,7 +31,7 @@ fn int_to_rem(num: u8) -> Rem {
 fn main() {
     for num in (1..101).collect::<Vec<u8>>() {
         println!("{}",
-            match (int_to_rem(num % 3), int_to_rem(num % 5)) {
+            match (int_to_rem(&(num % 3)), int_to_rem(&(num % 5))) {
                 (Rem::Zero, Rem::Zero) => "FizzBuzz".to_string(),
                 (Rem::Zero, Rem::Other(_)) => "Fizz".to_string(),
                 (Rem::Other(_), Rem::Zero) => "Buzz".to_string(),
