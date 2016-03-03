@@ -1,5 +1,5 @@
 // Based on http://composition.al/blog/2013/03/02/fizzbuzz-revisited
-// all the way down the rabbit hole: http://chrismorgan.info/blog/rust-fizzbuzz.html
+// All the way down the rabbit hole: http://chrismorgan.info/blog/rust-fizzbuzz.html
 
 // Used to match against a zero or non-zero remainder
 enum Rem {
