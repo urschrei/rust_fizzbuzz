@@ -33,12 +33,14 @@ fn int_to_rem(num: &u8) -> Rem {
 
 fn main() {
     for num in 1..101 {
-        println!("{}",
-                 match (int_to_rem(&(num % 3)), int_to_rem(&(num % 5))) {
-                     (Rem::Zero, Rem::Zero) => "FizzBuzz".to_string(),
-                     (Rem::Zero, Rem::Other(_)) => "Fizz".to_string(),
-                     (Rem::Other(_), Rem::Zero) => "Buzz".to_string(),
-                     (Rem::Other(_), Rem::Other(_)) => num.to_string(),
-                 })
+        println!(
+            "{}",
+            match (int_to_rem(&(num % 3)), int_to_rem(&(num % 5))) {
+                (Rem::Zero, Rem::Zero) => "FizzBuzz".to_string(),
+                (Rem::Zero, Rem::Other(_)) => "Fizz".to_string(),
+                (Rem::Other(_), Rem::Zero) => "Buzz".to_string(),
+                (Rem::Other(_), Rem::Other(_)) => num.to_string(),
+            }
+        )
     }
 }
