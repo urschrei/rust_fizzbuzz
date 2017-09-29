@@ -4,4 +4,4 @@ An update of Lindsey Kuper's excellent [Rust FizzBuzz](http://composition.al/blo
 
 The [`by_reference`](https://github.com/urschrei/rust_fizzbuzz/tree/by_reference) branch contains a working copy of the code which passes the results of the division operations to `int_to_rem` by reference, where they're destructured.
 
-This is by no means the most efficient (or fastest) way to do it (see [Chris Morgan's explorations](http://chrismorgan.info/blog/rust-fizzbuzz.html) for more), but I find the implementation particularly intuitive, and I do what I feel like.
+This is by no means the most efficient (or fastest) way to do it (see [Chris Morgan's explorations](http://chrismorgan.info/blog/rust-fizzbuzz.html) for more), but I find the implementation particularly intuitive.
