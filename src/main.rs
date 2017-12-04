@@ -17,7 +17,6 @@ enum NonZeroRem {
     Three,
     Four,
 }
-
 // Easily allows us to exhaustively decide the return value
 // Input is the remainder of a modulo operation from a match expression
 fn int_to_rem(num: u8) -> Rem {
